@@ -1,1 +1,1 @@
-# fw1test
+## enable session variables ##
