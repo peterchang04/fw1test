@@ -1,10 +1,8 @@
 <cfoutput>
-	<cfset rc.title = "Setup View" />	<!--- set a variable to be used in a layout --->
-	<p>This is the setup view</p>
-	<!--- use the named result from the service call --->
-	<p><a href="#buildURL('main')#">browse</a>!</p>
+	<cfset rc.page = "setup" />	<!--- set a variable to be used in a layout --->
 
-	<form action="#buildURL('main.logout')#" method="POST">
-		<button type="submit" name="logout">Log Out</button>
-	</form>
+	<div class="container">
+		#rc.productView.renderList(argumentCollection=rc,edit=true)#
+	</div>
+
 </cfoutput>

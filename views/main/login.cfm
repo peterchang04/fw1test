@@ -1,12 +1,30 @@
 <cfoutput>
-	<cfset rc.title = "Browsing View" />	<!--- set a variable to be used in a layout --->
-	<p>This is the login view</p>
-	<!--- use the named result from the service call --->
-	<p><a href="#buildURL('main.setup')#">Setup</a>!</p>
+	<cfset rc.page = "login" />	<!--- set a variable to be used in a layout --->
 
-	<form action="#buildURL('main.authenticate')#" method="POST">
-		<input name="email" type="text" placeholder="email : peter.chang.04@gmail.com" value="peter.chang.04@gmail.com" />
-		<input name="password" type="password" placeholder="password : welcome" value="welcome" />
-		<button type="submit" name="login">Log In</button>
-	</form>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<form action="#buildURL('main.authenticate')#" method="POST">
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input 
+							class="form-control" 
+							type="text" 
+							name='email' 
+							placeholder="email : peter.chang.04@gmail.com"
+						/>
+					</div>
+
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+						<input class="form-control" type="password" name='password' placeholder="password : welcome"/>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-def btn-block">Login</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </cfoutput>

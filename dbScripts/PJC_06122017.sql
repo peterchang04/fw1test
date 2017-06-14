@@ -55,6 +55,15 @@ begin
 			ALLOW_PAGE_LOCKS  = ON
 		) ON [PRIMARY]
 	) ON [PRIMARY]
+
+	insert into product_category(id, title, active, created_on, modified_on)
+	values (newID(), 'Jewellery', 1, getDate(), getDate())
+	insert into product_category(id, title, active, created_on, modified_on)
+	values (newID(), 'Apparel', 1, getDate(), getDate())
+	insert into product_category(id, title, active, created_on, modified_on)
+	values (newID(), 'Furniture', 1, getDate(), getDate())
+	insert into product_category(id, title, active, created_on, modified_on)
+	values (newID(), 'Art', 1, getDate(), getDate())
 end
 
 /**** PRODUCT ****/
