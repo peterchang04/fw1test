@@ -74,17 +74,17 @@ component {
 		local.q.setDatasource('fw1db');
 		local.q.setSQL("
 
-			declare @newID uniqueidentifier = :id
+			declare @newID uniqueidentifier = ( :id )
 
 			update product 
 
-			set title = :title, 
+			set title = ( :title ), 
 			description = :description,
-			price = :price, 
-			image = :image,
-			product_category_id = :product_category_id
+			price = ( :price ), 
+			image = ( :image ),
+			product_category_id = ( :product_category_id )
 			where active = 1
-			and id = :id
+			and id = ( :id )
 
 			select @newID as id;
 

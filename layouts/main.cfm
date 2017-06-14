@@ -41,7 +41,7 @@
 							</li>
 						</ul>
 
-						<cfif len(session.userID) eq 36>
+						<cfif structKeyExists(session,"userID") and len(session.userID) eq 36>
 							<form id="logButton" action="#buildURL('main.logout')#" method="POST">
 								<button type="submit" class="btn btn-sm">Sign Out</button>
 							</form>

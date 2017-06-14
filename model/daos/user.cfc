@@ -14,8 +14,8 @@ component {
 			[user].id
 			from [user]
 			where [user].active = 1
-			and [user].email = :email
 			and [user].password = 'welcome'
+			and [user].email = :email
 
 		"); // password hardcoded for now
 
